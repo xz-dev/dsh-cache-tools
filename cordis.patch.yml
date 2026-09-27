@@ -1,0 +1,13 @@
+# dsh-cache-tools bundle patch: mounts the plugin under the stable id
+# `dsh-cache-tools`. Defaults below match the Pi configuration of the ported
+# extensions (footer stats in `session` scope, timers on, request-key warning
+# on); the same keys are exported as the Config schema, so a profile can
+# override them per-row.
+- insert:
+    - id: dsh-cache-tools
+      name: dsh-cache-tools
+      config:
+        footerMode: session
+        footerStatus: true
+        executionTime: true
+        silenceRequestKeyWarning: false
